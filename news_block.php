@@ -46,6 +46,7 @@ class NewsBlock {
 		$this->feed->set_feed_url($feed);
 	}
 
+    //TODO: Making this a template would be cool
 	public function render() {
 		echo "<!-- num_stories: ". $this->num_stories. " -->";
 		if (count($this->stories) > 0) {
@@ -92,6 +93,7 @@ class NewsBlock {
 		return trim($css);
 	}
 
+    //TODO: Making this loaded from a external file would be nice
 	function determine_feed($from_where) {
 		switch ($from_where) {
 			case '/about/rsstest.php':
